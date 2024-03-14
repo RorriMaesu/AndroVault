@@ -1,5 +1,3 @@
-Absolutely, here is an improved version of the README file for the Password Manager application with a detailed explanation of each section:
-
 **AndroVault - Password Manager**
 
 This README file provides an overview of AndroVault, a Python application designed to securely store and manage your passwords. 
