@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="logo.png" alt="Password Manager Logo" width="200">
+</div>
+
 # 🔐 Password Manager
 
 A secure, feature-rich password management application built with Python and Tkinter.
