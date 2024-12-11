@@ -206,7 +206,6 @@ You'll need Python 3.8 or higher installed on your computer.
 2. Click "Downloads" and download the latest Python version
 3. Run the installer
 4. ⚠️ IMPORTANT: Check the box that says "Add Python to PATH"
-   ![Python Install Checkbox](path/to/checkbox_image.png)
 5. Click "Install Now"
 
 **Mac Users**:
@@ -224,53 +223,56 @@ Open Terminal and run:
 - Ubuntu/Debian: `sudo apt install python3`
 - Fedora: `sudo dnf install python3`
 
-### ⚙️ Step 2: Download AndroVault
+### ⚙️ Step 2: Install AndroVault
 
-1. Look for the green "Code" button at the top of this page
-2. Click it and select "Download ZIP"
-3. Find the downloaded ZIP file (usually in Downloads folder)
-4. Right-click and extract it
-5. Remember where you extracted it!
+1. Clone the repository or download ZIP:
+   ```bash
+   git clone https://github.com/yourusername/AndroVault.git
+   ```
+   Or use the green "Code" button to download ZIP
 
-### 🛠️ Step 3: Setup
+2. If you downloaded ZIP:
+   - Extract it to a location you'll remember
+   - Open the extracted folder
+
+3. Run the installation script:
+
+   **Windows Users**:
+   - Double-click `install.bat`
+   - Or open Command Prompt and run:
+     ```cmd
+     install.bat
+     ```
+
+   **Mac/Linux Users**:
+   - Open Terminal and run:
+     ```bash
+     chmod +x install.sh
+     ./install.sh
+     ```
+
+### 🏃‍♂️ Step 3: Running AndroVault
 
 **Windows Users**:
-1. Open the folder where you extracted AndroVault
-2. Find and double-click `setup.bat`
-3. Wait for the setup to complete
-4. When you see "Setup complete!", press any key
+- Double-click `launch.bat`
+- Or open Command Prompt and run:
+  ```cmd
+  launch.bat
+  ```
 
 **Mac/Linux Users**:
-1. Open Terminal
-2. Type `cd ` (with a space after cd)
-3. Drag the AndroVault folder into Terminal (this fills in the path)
-4. Press Enter
-5. Copy and paste this command: `chmod +x setup.sh run.sh && ./setup.sh`
-6. Press Enter when prompted
+- Open Terminal and run:
+  ```bash
+  chmod +x launch.sh
+  ./launch.sh
+  ```
 
-### 🏃‍♂️ Step 4: Running AndroVault
-
-**First Time and Every Time After:**
-
-**Windows Users**:
-- Find and double-click `run.bat`
-
-**Mac/Linux Users**:
-- Find and double-click `run.sh`
-- If that doesn't work:
-  1. Open Terminal
-  2. Type `cd ` (with a space)
-  3. Drag the AndroVault folder into Terminal
-  4. Press Enter
-  5. Type `./run.sh` and press Enter
-
-### 🔧 Help! Something's Not Working
+### 🔧 Troubleshooting
 
 **Windows Problems:**
 1. "Python is not recognized..."
    - ✅ Go back to Step 1 and reinstall Python
    - ✅ Make sure you checked "Add Python to PATH"
-   ![Python PATH Setting](path/to/path_image.png)
 
 2. "Windows protected your PC" message
    - ✅ Click "More info"
@@ -278,17 +280,16 @@ Open Terminal and run:
 
 **Mac/Linux Problems:**
 1. "Permission denied"
-   - ✅ In Terminal, run: `chmod +x setup.sh run.sh`
+   - ✅ Run: `chmod +x install.sh launch.sh`
 
 2. Can't find Python
    - ✅ Mac: Run `brew install python3`
    - ✅ Ubuntu/Debian: Run `sudo apt install python3`
 
 **Still Stuck?**
-1. Make sure you're in the right folder (where you see `setup.bat` or `setup.sh`)
+1. Make sure you're in the folder containing `install.bat`/`install.sh`
 2. Try restarting your computer
 3. [Open an issue](https://github.com/yourusername/AndroVault/issues) on our GitHub page
-4. Include what operating system you're using and what step you're stuck on
 
 ## 📖 File Descriptions
 
