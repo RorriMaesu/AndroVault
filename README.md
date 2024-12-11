@@ -198,14 +198,82 @@ endLine: 275
 ## 🚀 Getting Started
 
 ### 📋 Prerequisites
-```bash
-python -m pip install -r requirements.txt
-```
+- Python 3.8 or higher (Make sure Python is added to your PATH during installation)
+- Git (for cloning the repository)
+
+### ⚙️ Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/AndroVault.git
+   cd AndroVault
+   ```
+
+2. Run the setup script:
+   - On Windows:
+     - Double-click `setup.bat`, or
+     - Run in Command Prompt:
+     ```bash
+     setup.bat
+     ```
+     - Or using Git Bash:
+     ```bash
+     ./setup.sh
+     ```
+   
+   - On Unix/Linux/Mac:
+     ```bash
+     chmod +x setup.sh  # Make script executable (first time only)
+     ./setup.sh
+     ```
+
+   This will:
+   - Create a virtual environment
+   - Install all required dependencies
+   - Set up the initial configuration
 
 ### 🏃‍♂️ Running the Application
-```bash
-python main.py
-```
+1. Activate the virtual environment (if not already activated):
+   - Windows Command Prompt:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - Git Bash/Unix/Linux/Mac:
+     ```bash
+     source venv/bin/activate
+     ```
+
+2. Start the application:
+   ```bash
+   python main.py
+   ```
+
+### 🔧 Troubleshooting
+
+1. **Python not found**:
+   - Ensure Python is installed and added to PATH
+   - Windows users: Check "Add Python to PATH" during installation
+   - Verify by running `python --version` or `python3 --version`
+
+2. **Permission Issues** (Unix/Linux/Mac):
+   - Make setup script executable: `chmod +x setup.sh`
+   - Run with sudo if needed: `sudo ./setup.sh`
+
+3. **Virtual Environment Issues**:
+   - If `venv` creation fails, try:
+     ```bash
+     python -m pip install --upgrade virtualenv
+     python -m virtualenv venv
+     ```
+
+4. **Requirements Installation Fails**:
+   - Try upgrading pip first:
+     ```bash
+     python -m pip install --upgrade pip
+     ```
+   - Install requirements individually if needed:
+     ```bash
+     pip install pyperclip bcrypt cryptography pyotp qrcode Pillow
+     ```
 
 ### 🔐 Security Considerations
 - All sensitive data is encrypted at rest
