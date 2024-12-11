@@ -1,4 +1,6 @@
 @echo off
 cd %~dp0AndroVault
-call run.bat
+call venv\Scripts\activate.bat
+python main.py
+deactivate
 cd .. 
