@@ -1,0 +1,6 @@
+pyperclip
+bcrypt
+cryptography
+pyotp
+qrcode
+Pillow
