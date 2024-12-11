@@ -197,107 +197,98 @@ endLine: 275
 
 ## 🚀 Getting Started
 
-### 📋 Prerequisites
-- Python 3.8 or higher
-  - Windows users: During Python installation, **CHECK** "Add Python to PATH"
-  - Verify installation by opening a terminal/command prompt and typing:
-    ```bash
-    python --version    # or python3 --version on Mac/Linux
-    ```
-  - If this doesn't work, you need to fix your Python installation first!
+### 📋 Step 1: Install Python
 
-### ⚙️ First Time Setup
+You'll need Python 3.8 or higher installed on your computer.
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/AndroVault.git
-   cd AndroVault
-   ```
+**Windows Users**:
+1. Go to [python.org](https://python.org)
+2. Click "Downloads" and download the latest Python version
+3. Run the installer
+4. ⚠️ IMPORTANT: Check the box that says "Add Python to PATH"
+   ![Python Install Checkbox](path/to/checkbox_image.png)
+5. Click "Install Now"
 
-2. Create and activate a virtual environment:
+**Mac Users**:
+- Option 1 (Recommended):
+  1. Go to [brew.sh](https://brew.sh)
+  2. Copy and paste the installation command into Terminal
+  3. Run: `brew install python3`
+- Option 2:
+  1. Go to [python.org](https://python.org)
+  2. Download the Mac installer
+  3. Double-click and follow the instructions
 
-   What's a virtual environment? It's like a clean room for your Python project - it keeps this project's packages separate from other Python projects on your computer.
+**Linux Users**:
+Open Terminal and run:
+- Ubuntu/Debian: `sudo apt install python3`
+- Fedora: `sudo dnf install python3`
 
-   - On Windows (Command Prompt):
-     ```bash
-     # Create the virtual environment
-     python -m venv venv
-     
-     # Activate it
-     venv\Scripts\activate
-     ```
+### ⚙️ Step 2: Download AndroVault
 
-   - On Mac/Linux/Git Bash:
-     ```bash
-     # Create the virtual environment
-     python3 -m venv venv
-     
-     # Activate it
-     source venv/bin/activate
-     ```
+1. Look for the green "Code" button at the top of this page
+2. Click it and select "Download ZIP"
+3. Find the downloaded ZIP file (usually in Downloads folder)
+4. Right-click and extract it
+5. Remember where you extracted it!
 
-   You'll know it worked when you see `(venv)` at the start of your terminal line!
+### 🛠️ Step 3: Setup
 
-3. Install required packages:
-   ```bash
-   # First, upgrade pip
-   python -m pip install --upgrade pip
-   
-   # Then install requirements
-   pip install -r requirements.txt
-   ```
+**Windows Users**:
+1. Open the folder where you extracted AndroVault
+2. Find and double-click `setup.bat`
+3. Wait for the setup to complete
+4. When you see "Setup complete!", press any key
 
-### 🏃‍♂️ Running the Application (After Setup)
+**Mac/Linux Users**:
+1. Open Terminal
+2. Type `cd ` (with a space after cd)
+3. Drag the AndroVault folder into Terminal (this fills in the path)
+4. Press Enter
+5. Copy and paste this command: `chmod +x setup.sh run.sh && ./setup.sh`
+6. Press Enter when prompted
 
-1. Navigate to the project folder and activate the virtual environment:
-   - Windows (Command Prompt):
-     ```bash
-     venv\Scripts\activate
-     ```
-   - Mac/Linux/Git Bash:
-     ```bash
-     source venv/bin/activate
-     ```
+### 🏃‍♂️ Step 4: Running AndroVault
 
-2. Start the application:
-   ```bash
-   python main.py
-   ```
+**First Time and Every Time After:**
 
-### 🔧 Common Issues & Solutions
+**Windows Users**:
+- Find and double-click `run.bat`
 
-1. "Python not found" or "python: command not found":
-   - Windows: You forgot to check "Add Python to PATH" during installation
-   - Solution: Reinstall Python and CHECK the "Add Python to PATH" box
-   - Or search "Edit System Environment Variables" in Windows and add Python manually
+**Mac/Linux Users**:
+- Find and double-click `run.sh`
+- If that doesn't work:
+  1. Open Terminal
+  2. Type `cd ` (with a space)
+  3. Drag the AndroVault folder into Terminal
+  4. Press Enter
+  5. Type `./run.sh` and press Enter
 
-2. "pip not found":
-   - Make sure you activated the virtual environment (you should see `(venv)` in your terminal)
-   - Try using `python -m pip` instead of just `pip`
+### 🔧 Help! Something's Not Working
 
-3. Virtual environment not working:
-   - Make sure you're in the project directory
-   - Try removing the `venv` folder and creating it again:
-     ```bash
-     # Windows
-     rmdir /s /q venv
-     python -m venv venv
+**Windows Problems:**
+1. "Python is not recognized..."
+   - ✅ Go back to Step 1 and reinstall Python
+   - ✅ Make sure you checked "Add Python to PATH"
+   ![Python PATH Setting](path/to/path_image.png)
 
-     # Mac/Linux
-     rm -rf venv
-     python3 -m venv venv
-     ```
+2. "Windows protected your PC" message
+   - ✅ Click "More info"
+   - ✅ Click "Run anyway"
 
-4. Permission errors (Mac/Linux):
-   ```bash
-   # Try adding sudo
-   sudo python3 -m venv venv
-   ```
+**Mac/Linux Problems:**
+1. "Permission denied"
+   - ✅ In Terminal, run: `chmod +x setup.sh run.sh`
 
-5. Still stuck? Make sure:
-   - You're in the correct directory (where requirements.txt is)
-   - Python is properly installed (try `python --version`)
-   - You're using the correct commands for your operating system
+2. Can't find Python
+   - ✅ Mac: Run `brew install python3`
+   - ✅ Ubuntu/Debian: Run `sudo apt install python3`
+
+**Still Stuck?**
+1. Make sure you're in the right folder (where you see `setup.bat` or `setup.sh`)
+2. Try restarting your computer
+3. [Open an issue](https://github.com/yourusername/AndroVault/issues) on our GitHub page
+4. Include what operating system you're using and what step you're stuck on
 
 ## 📖 File Descriptions
 
