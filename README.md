@@ -195,101 +195,145 @@ endLine: 275
    - Integration testing
    - UI/UX validation
 
-## 🚀 Getting Started
+## 🚀 Installation Guide
 
-### 📋 Step 1: Install Python
+### Step-by-Step Installation (Windows)
 
-You'll need Python 3.8 or higher installed on your computer.
+#### 1️⃣ Install Required Software
 
-**Windows Users**:
+First, we need to install two programs that AndroVault needs to work:
+
+**A. Install Git:**
+1. Go to [git-scm.com](https://git-scm.com/downloads)
+2. Click the "Windows" download button
+3. When the download finishes, run the installer
+4. Click "Next" for all options (default settings are fine)
+5. Click "Install"
+6. Click "Finish" when done
+
+**B. Install Python:**
 1. Go to [python.org](https://python.org)
-2. Click "Downloads" and download the latest Python version
-3. Run the installer
-4. ⚠️ IMPORTANT: Check the box that says "Add Python to PATH"
-5. Click "Install Now"
+2. Click "Downloads" then click "Python 3.x.x" (latest version)
+3. ⚠️ VERY IMPORTANT: Check the box that says "Add Python to PATH"
+4. Click "Install Now"
+5. Wait for the installation to complete
+6. Click "Close" when done
 
-**Mac Users**:
-- Option 1 (Recommended):
-  1. Go to [brew.sh](https://brew.sh)
-  2. Copy and paste the installation command into Terminal
-  3. Run: `brew install python3`
-- Option 2:
-  1. Go to [python.org](https://python.org)
-  2. Download the Mac installer
-  3. Double-click and follow the instructions
+#### 2️⃣ Download AndroVault
 
-**Linux Users**:
-Open Terminal and run:
-- Ubuntu/Debian: `sudo apt install python3`
-- Fedora: `sudo dnf install python3`
+Now we'll download the AndroVault program:
 
-### ⚙️ Step 2: Install AndroVault
+1. Open Command Prompt:
+   - Press the Windows key + R on your keyboard
+   - Type `cmd` and press Enter
+   - You should see a black window with white text
 
-1. Clone the repository or download ZIP:
+2. Download AndroVault:
+   - Type this command exactly as shown:
+     ```bash
+     git clone https://github.com/RorriMaesu/AndroVault.git
+     ```
+   - Press Enter
+   - Wait until you see new text appear
+   - You should see messages about files being downloaded
+
+3. Go to the AndroVault folder:
+   - Type this command:
+     ```bash
+     cd AndroVault
+     ```
+   - Press Enter
+   - The text before the cursor should now end with '\AndroVault>'
+
+#### 3️⃣ Install AndroVault
+
+Now we'll run the installation script:
+
+1. Start the installation:
+   - Type this command:
+     ```bash
+     install.bat
+     ```
+   - Press Enter
+   - You'll see text appearing as the installation progresses
+   - This might take a few minutes
+   - ✅ Success: You'll see "Installation completed successfully!"
+   - ❌ If you see any errors, check the Troubleshooting section below
+
+#### 4️⃣ Start Using AndroVault
+
+You can start AndroVault in two ways:
+
+**Option 1 - Using File Explorer:**
+1. Open File Explorer (Windows key + E)
+2. Go to where you downloaded AndroVault
+3. Double-click the `launch.bat` file
+4. The program should open in a new window
+
+**Option 2 - Using Command Prompt:**
+1. If you're still in Command Prompt, type:
    ```bash
-   git clone https://github.com/yourusername/AndroVault.git
+   launch.bat
    ```
-   Or use the green "Code" button to download ZIP
+2. Press Enter
+3. The program should open in a new window
 
-2. If you downloaded ZIP:
-   - Extract it to a location you'll remember
-   - Open the extracted folder
+### 🔧 Troubleshooting Common Problems
 
-3. Run the installation script:
+#### "Python is not recognized..."
+You'll see this if Python wasn't added to PATH:
+1. Uninstall Python from Windows Settings
+2. Download Python again
+3. ⚠️ Make sure to check "Add Python to PATH"
+4. Install Python again
+5. Restart your computer
+6. Try the installation again
 
-   **Windows Users**:
-   - Double-click `install.bat`
-   - Or open Command Prompt and run:
-     ```cmd
+#### "Git is not recognized..."
+This means Git isn't installed properly:
+1. Uninstall Git
+2. Download Git again
+3. Install Git
+4. Restart your computer
+5. Try the installation again
+
+#### Installation Errors
+If the installation fails:
+1. Look in the AndroVault folder for a file named `install_[numbers].log`
+2. Check that your internet is working
+3. Try these steps:
+   - Close Command Prompt
+   - Open Command Prompt as Administrator:
+     - Press Windows key
+     - Type "cmd"
+     - Right-click "Command Prompt"
+     - Click "Run as administrator"
+   - Navigate back to AndroVault:
+     ```bash
+     cd C:\Path\To\AndroVault
+     ```
+   - Try installation again:
+     ```bash
      install.bat
      ```
 
-   **Mac/Linux Users**:
-   - Open Terminal and run:
-     ```bash
-     chmod +x install.sh
-     ./install.sh
-     ```
+#### Still Having Problems?
+1. Go to our [GitHub Issues page](https://github.com/RorriMaesu/AndroVault/issues)
+2. Click "New Issue"
+3. Describe what happened
+4. Include the contents of your install log file
+5. Our team will help you solve the problem
 
-### 🏃‍♂️ Step 3: Running AndroVault
+### ✅ How to Know Everything Worked
 
-**Windows Users**:
-- Double-click `launch.bat`
-- Or open Command Prompt and run:
-  ```cmd
-  launch.bat
-  ```
+After installation, you should have:
+1. A folder named "AndroVault" containing:
+   - `launch.bat` - Used to start the program
+   - `install.bat` - The installation script you used
+   - Other program files and folders
 
-**Mac/Linux Users**:
-- Open Terminal and run:
-  ```bash
-  chmod +x launch.sh
-  ./launch.sh
-  ```
-
-### 🔧 Troubleshooting
-
-**Windows Problems:**
-1. "Python is not recognized..."
-   - ✅ Go back to Step 1 and reinstall Python
-   - ✅ Make sure you checked "Add Python to PATH"
-
-2. "Windows protected your PC" message
-   - ✅ Click "More info"
-   - ✅ Click "Run anyway"
-
-**Mac/Linux Problems:**
-1. "Permission denied"
-   - ✅ Run: `chmod +x install.sh launch.sh`
-
-2. Can't find Python
-   - ✅ Mac: Run `brew install python3`
-   - ✅ Ubuntu/Debian: Run `sudo apt install python3`
-
-**Still Stuck?**
-1. Make sure you're in the folder containing `install.bat`/`install.sh`
-2. Try restarting your computer
-3. [Open an issue](https://github.com/yourusername/AndroVault/issues) on our GitHub page
+When you run the program:
+1. A
 
 ## 📖 File Descriptions
 
