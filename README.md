@@ -148,7 +148,7 @@ endLine: 275
 3. Session Management
    - Activity monitoring
    - Auto-lock functionality
-   - Memory protection
+   - Secure state management
 
 ### 🛡️ Data Protection
 1. Storage Security
@@ -198,46 +198,63 @@ endLine: 275
 ## 🚀 Getting Started
 
 ### 📋 Prerequisites
-- Python 3.8 or higher (Make sure Python is added to your PATH during installation)
-- Git (for cloning the repository)
+- Python 3.8 or higher
+  - Windows users: During Python installation, **CHECK** "Add Python to PATH"
+  - Verify installation by opening a terminal/command prompt and typing:
+    ```bash
+    python --version    # or python3 --version on Mac/Linux
+    ```
+  - If this doesn't work, you need to fix your Python installation first!
 
-### ⚙️ Installation
-1. Clone the repository:
+### ⚙️ First Time Setup
+
+1. Clone this repository:
    ```bash
    git clone https://github.com/yourusername/AndroVault.git
    cd AndroVault
    ```
 
-2. Run the setup script:
-   - On Windows:
-     - Double-click `setup.bat`, or
-     - Run in Command Prompt:
+2. Create and activate a virtual environment:
+
+   What's a virtual environment? It's like a clean room for your Python project - it keeps this project's packages separate from other Python projects on your computer.
+
+   - On Windows (Command Prompt):
      ```bash
-     setup.bat
+     # Create the virtual environment
+     python -m venv venv
+     
+     # Activate it
+     venv\Scripts\activate
      ```
-     - Or using Git Bash:
+
+   - On Mac/Linux/Git Bash:
      ```bash
-     ./setup.sh
+     # Create the virtual environment
+     python3 -m venv venv
+     
+     # Activate it
+     source venv/bin/activate
      ```
+
+   You'll know it worked when you see `(venv)` at the start of your terminal line!
+
+3. Install required packages:
+   ```bash
+   # First, upgrade pip
+   python -m pip install --upgrade pip
    
-   - On Unix/Linux/Mac:
-     ```bash
-     chmod +x setup.sh  # Make script executable (first time only)
-     ./setup.sh
-     ```
+   # Then install requirements
+   pip install -r requirements.txt
+   ```
 
-   This will:
-   - Create a virtual environment
-   - Install all required dependencies
-   - Set up the initial configuration
+### 🏃‍♂️ Running the Application (After Setup)
 
-### 🏃‍♂️ Running the Application
-1. Activate the virtual environment (if not already activated):
-   - Windows Command Prompt:
+1. Navigate to the project folder and activate the virtual environment:
+   - Windows (Command Prompt):
      ```bash
      venv\Scripts\activate
      ```
-   - Git Bash/Unix/Linux/Mac:
+   - Mac/Linux/Git Bash:
      ```bash
      source venv/bin/activate
      ```
@@ -247,40 +264,40 @@ endLine: 275
    python main.py
    ```
 
-### 🔧 Troubleshooting
+### 🔧 Common Issues & Solutions
 
-1. **Python not found**:
-   - Ensure Python is installed and added to PATH
-   - Windows users: Check "Add Python to PATH" during installation
-   - Verify by running `python --version` or `python3 --version`
+1. "Python not found" or "python: command not found":
+   - Windows: You forgot to check "Add Python to PATH" during installation
+   - Solution: Reinstall Python and CHECK the "Add Python to PATH" box
+   - Or search "Edit System Environment Variables" in Windows and add Python manually
 
-2. **Permission Issues** (Unix/Linux/Mac):
-   - Make setup script executable: `chmod +x setup.sh`
-   - Run with sudo if needed: `sudo ./setup.sh`
+2. "pip not found":
+   - Make sure you activated the virtual environment (you should see `(venv)` in your terminal)
+   - Try using `python -m pip` instead of just `pip`
 
-3. **Virtual Environment Issues**:
-   - If `venv` creation fails, try:
+3. Virtual environment not working:
+   - Make sure you're in the project directory
+   - Try removing the `venv` folder and creating it again:
      ```bash
-     python -m pip install --upgrade virtualenv
-     python -m virtualenv venv
+     # Windows
+     rmdir /s /q venv
+     python -m venv venv
+
+     # Mac/Linux
+     rm -rf venv
+     python3 -m venv venv
      ```
 
-4. **Requirements Installation Fails**:
-   - Try upgrading pip first:
-     ```bash
-     python -m pip install --upgrade pip
-     ```
-   - Install requirements individually if needed:
-     ```bash
-     pip install pyperclip bcrypt cryptography pyotp qrcode Pillow
-     ```
+4. Permission errors (Mac/Linux):
+   ```bash
+   # Try adding sudo
+   sudo python3 -m venv venv
+   ```
 
-### 🔐 Security Considerations
-- All sensitive data is encrypted at rest
-- Memory is cleared after use
-- Clipboard contents are automatically cleared
-- Session timeouts enforce security
-- Password strength requirements enforced
+5. Still stuck? Make sure:
+   - You're in the correct directory (where requirements.txt is)
+   - Python is properly installed (try `python --version`)
+   - You're using the correct commands for your operating system
 
 ## 📖 File Descriptions
 
